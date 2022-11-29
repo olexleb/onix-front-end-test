@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="media-q.css">
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Projectus</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="leftbar" class="leftbar">
+            <div class="site-name">
+                <img class="logo-projectus" src="./assets/Logo@3x.svg" alt="logo">
+                <p>PROJECTUS</p>
+                <img class="search-icon" src="./assets/Search@3x.svg" alt="search">
+            </div>
+            <div class="profile">
+                <img class="jean" src="./images/jeangonzales.png" alt="jean">
+                <div class="profile-text">
+                    <p>Jean Gonzales</p>
+                    <p class="product" >Product Owner</p>
+                </div>
+                <div class="prof-dots">
+                    <img src="./assets/icons8-more-30.png" alt="dots-prof">
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="completed">
+                    <p class="perviy">372</p>
+                    <p class="vtoroy">Completed tasks</p>
+                </div>
+                <div class="opened">
+                    <p class="tretiy">11</p>
+                    <p class="chetvertiy">Open Tasks</p>
+                </div>
+            </div>
+            <div class="menu">
+                <p class="menu-text">MENU</p>
+                <a class="menu-link" href="">Home</a>
+                <a class="menu-link" href="">My Tasks</a>
+                <div class="mlink3">
+                    <a class="menu-link3" href="">Notifications</a>
+                    <div class="oval-menu">
+                        <p>3</p>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div  class="leftside">
+                    <div class="name-logo">
+                        <div id="burger" class="burger">
+                            <img src="./assets/burger-norm.svg.svg" alt="burger">
+                        </div>
+                        <img class="name-logotype" src="./assets/Shapes@2x.png" alt="logo">
+                        <p>Website Redesign</p>
+                        <div class="oval-logo">
+                            <img src="./assets/tri-tochki.svg" alt="dots">
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#">Tasks</a></li>
+                        <li><a href="#">Kanban</a></li>
+                        <li class="active"><a href="#">Activity</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Files</a></li>
+                    </ul>
+                </div>
+                <div class="rightside">
+                    <div class="profiles">
+                        <img class="profiles-images" src="./images/wepik-photo-mode-20221017-22272.png" alt="profile2">
+                        <img class="profiles-images" src="./images/wepik-photo-mode-20221017-22287.png" alt="profile3">
+                        <img class="profiles-images" src="./images/wepik-photo-mode-20221017-223143.png" alt="profile1">
+                    </div>
+                    <div class="buttons">
+                        <button class="button-share">Share</button>
+                        <button class="button-chat">Chat</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="content">
+                    <p class="yo">TODAY</p>
+                    <div class="message">
+                        <div class="oval1">
+                            <img class="strelka" src="./assets/Icon@3x.svg" alt="strelka-icon">
+                        </div>
+                        <p class="darika">Darika Samak mark as done Listing on Product Hunt so that we can reach as many potential users</p>
+                        <p class="time1">8:40 PM</p>
+                    </div>
+                    <div class="comment">
+                        <div class="oval2">
+                            <img class="smska" src="./assets/icons8-messages.svg" alt="message-icon">
+                        </div>
+                        <p class="emilee">Emilee Simchenko commented on Account for teams and personal in bottom style</p>
+                        <p class="time2">7:32 PM</p>
+                    </div>
+                    <div class="comment2">
+                        <p>During a project build, it is necessary to evaluate the product design and development against project requirements and outcomes</p>
+                    </div>
+                    <div class="upload-comment">
+                        <div class="oval3">
+                            <img class="downicon" src="./assets/download-icon.svg" alt="download-icon">
+                        </div>
+                        <p class="darika2">Darika Samak uploaded 4 files on An option to search in current projects or in all projects</p>
+                        <p class="time3">6:02 PM</p>
+                    </div>
+                    <div class="nature-images">
+                        <img class="img-upload" src="./images/img1.jpg" alt="img1">
+                        <img class="img-upload" src="./images/img2.jpg" alt="img2">
+                        <img class="img-upload" src="./images/img3.jpg" alt="img3">
+                        <img class="img-upload" src="./images/img4.jpg" alt="img4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let ul = document.querySelector('ul');
+        let li = document.querySelectorAll('li');
+
+        li.forEach(el => {
+            el.addEventListener('click', function(){
+                ul.querySelector('.active').classList.remove('active');
+
+                el.classList.add('active');
+            });
+        });
+        let burger = document.getElementById('burger')
+        let leftbar =document.getElementById('leftbar')
+        burger.addEventListener('click',()=>{
+            leftbar.classList.toggle('hide')
+        })
+    </script>
+</body>
+</html>
